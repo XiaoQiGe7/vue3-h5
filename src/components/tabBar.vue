@@ -32,7 +32,14 @@ const getIconUrl = (name: string) => {
 </script>
 
 <template>
-  <van-tabbar fixed route v-model="active" @change="onChange">
+  <van-tabbar
+    fixed
+    route
+    v-model="active"
+    @change="onChange"
+    active-color="#000000"
+    inactive-color="#959595"
+  >
     <van-tabbar-item
       v-for="item in props.data"
       :key="item.id"
@@ -41,13 +48,9 @@ const getIconUrl = (name: string) => {
     >
       <span>{{ item.name }}</span>
       <template #icon="props">
-        <img
-          class="icon"
-          :src="
-            !props.active
-              ? getIconUrl(item.to)
-              : getIconUrl(`${item.to}-active`)
-          "
+        <van-icon
+          :name="item.icon"
+          :color="props.active ? '#000000' : '#959595'"
         />
       </template>
     </van-tabbar-item>

@@ -18,7 +18,7 @@ export default defineConfig(({ command, mode }) => {
 				"@": path.resolve(__dirname, "src"),
 				// 导入其他目录
 				"components": path.resolve(__dirname, "components"),
-				extensions:[".js",".ts"]
+				extensions:[".js",".ts",".json"]
 			}
 		},
 		plugins: [

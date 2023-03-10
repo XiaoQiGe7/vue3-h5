@@ -1,33 +1,40 @@
 /** 
  *  @author TalkTao
  * @description  按需引入Vant
-*/ 
-import { Button, Tabbar, TabbarItem, Sticky, NavBar, Icon, Search, DropdownMenu, DropdownItem, Image, Lazyload, Tabs, Tab, Toast, Field, Cell, CellGroup, Form, List  } from 'vant'
+*/
+import { ConfigProvider,SubmitBar,Checkbox, CheckboxGroup,Card,Divider,Button, Tabbar, TabbarItem, Sticky, NavBar, Icon, Search, DropdownMenu, DropdownItem, Image, Lazyload, Tabs, Tab, Toast, Field, Cell, CellGroup, Form, List } from 'vant'
+// import { TextEllipsis } from 'vant'
 const pluginsVant = [
-	Button, 
+	Button,
 	Tabbar,
-	TabbarItem,
-	Sticky,
 	NavBar,
 	Icon,
+	Card,
+	Divider,
+	Checkbox,
+	CheckboxGroup,
+	SubmitBar,
+	ConfigProvider,
+	TabbarItem,
+	Sticky,
+	Cell,
+	CellGroup,
 	Search,
-	DropdownMenu,
-	DropdownItem,
-	Image,
 	Lazyload,
 	Tabs,
 	Tab,
 	Toast,
 	Field,
-	Cell,
-	CellGroup,
 	Form,
-	List 
+	DropdownMenu,
+	DropdownItem,
+	Image,
+	List,
 ]
 export const vantPlugins = {
-  	install: function(vm) {
-    	pluginsVant.forEach((item:any) => {
-      	vm.component(item.name, item);
-    	});
-  	}
+	install: function (vm) {
+		pluginsVant.forEach((item: any) => {
+			vm.component(item.name, item);
+		});
+	}
 };

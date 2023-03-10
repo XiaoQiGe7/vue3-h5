@@ -166,3 +166,10 @@ export function keyConvertValue(keys, values) {
     }
     return arr.join()
 }
+
+export function getImageFile(fileName){
+    const path = `../assets/image${fileName}.jpg`;
+    const iconModules = import.meta.globEager("../assets/image/*.jpg");
+    const file = iconModules[path].default;
+    return file;
+}

@@ -15,7 +15,6 @@ const TOKEN_STORAGE = StorageType.LOCAL
 // const MENU_STORAGE = StorageType.SESSION
 const MENU_STORAGE = StorageType.LOCAL
 const MENU_KEY = 'menus'
-const PERMISSION_KEY = 'permissions'
 /**
  * @description: 本地存储、获取、清除
  * @param {String} key 存储键值
