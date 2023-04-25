@@ -2,7 +2,7 @@
  *  @author TalkTao
  * @description  按需引入Vant
 */
-import { ConfigProvider,SubmitBar,Checkbox, CheckboxGroup,Card,Divider,Button, Tabbar, TabbarItem, Sticky, NavBar, Icon, Search, DropdownMenu, DropdownItem, Image, Lazyload, Tabs, Tab, Toast, Field, Cell, CellGroup, Form, List } from 'vant'
+import { ConfigProvider,SubmitBar,RadioGroup, Radio,Checkbox, CheckboxGroup,Card,Divider,Button, Tabbar, TabbarItem, Sticky, NavBar, Icon, Search, DropdownMenu, DropdownItem, Image, Lazyload, Tabs, Tab, Toast, Field, Cell, CellGroup, Form, List } from 'vant'
 // import { TextEllipsis } from 'vant'
 const pluginsVant = [
 	Button,
@@ -13,6 +13,8 @@ const pluginsVant = [
 	Divider,
 	Checkbox,
 	CheckboxGroup,
+	RadioGroup,
+	Radio,
 	SubmitBar,
 	ConfigProvider,
 	TabbarItem,

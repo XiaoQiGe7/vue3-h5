@@ -120,7 +120,7 @@ const text = "1";
   justify-content: space-around;
   .item {
     flex: 0 0 23%;
-    // background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     margin-top: 10px;
     box-sizing: border-box;
     padding: 10px;

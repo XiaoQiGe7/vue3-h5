@@ -2,7 +2,9 @@ body,p{
     margin: 0;
     padding: 0;
 }
-
+body::-webkit-scrollbar{
+    width: 0 !important;
+}
 .color_000{
     color: #000;
 }

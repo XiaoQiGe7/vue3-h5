@@ -60,3 +60,19 @@ window.onload = function () {
     卖家
 }
 </script>
+
+
+应用技术：Vue3、Vite、Vant4、Sass、TypeScript
+
+项目描述：用于展示售卖switch卡带的移动商城
+
+主要工作：1、采用viewport方案实现适配
+
+      2、使用import导出静态文件夹
+
+
+https://xiaoqige7.github.io
+
+vue全语法
+vue-router全语法
+ts全

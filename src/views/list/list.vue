@@ -86,7 +86,7 @@ active.value = dictList.value[0].id;
 }
 .commodity-item {
   display: flex;
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
   margin-bottom: 10px;
   .commodity-image {
     width: 140px;

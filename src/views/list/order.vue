@@ -6,29 +6,7 @@ import zhifubaoIcon from "@/assets/icon/zhifubao.png";
 import { uuid } from "@/utils/random.js";
 import data from "../../assets/json/gameData.json";
 
-// const state = reactive({
-//   payList:[{}]
-// })
-
-const payList = [
-  {
-    id: uuid(),
-    title: "支付宝支付",
-    icon: weixinIcon,
-  },
-  {
-    id: uuid(),
-    title: "微信支付",
-    icon: zhifubaoIcon,
-  },
-];
-const checkboxRefs = ref([]);
-const toggle = (index) => {
-  checkboxRefs.value[index].toggle();
-};
-onBeforeUpdate(() => {
-  checkboxRefs.value = [];
-});
+const checked = ref("");
 const getIconUrl = (name: string) => {
   const path = `../../assets/image${name}.jpg`;
   const iconModules = import.meta.globEager("../../assets/image/*.jpg");
@@ -64,33 +42,37 @@ const getIconUrl = (name: string) => {
     </div>
 
     <div class="payWay">
-      <van-checkbox-group v-model="checked">
+      <van-radio-group v-model="checked">
         <van-cell-group inset>
           <van-cell
-            v-for="(item, index) in payList"
+            title="支付宝支付"
+            :icon="weixinIcon"
             clickable
-            :key="item.id"
-            :title="item.title"
-            :icon="item.icon"
-            @click="toggle(index)"
+            @click="checked = '1'"
           >
             <template #right-icon>
-              <van-checkbox
-                :name="item.title"
-                :ref="(el) => (checkboxRefs[index] = el)"
-                @click.stop
-              />
+              <van-radio name="1" />
+            </template>
+          </van-cell>
+          <van-cell
+            title="微信支付"
+            :icon="zhifubaoIcon"
+            clickable
+            @click="checked = '2'"
+          >
+            <template #right-icon>
+              <van-radio name="2" />
             </template>
           </van-cell>
         </van-cell-group>
-      </van-checkbox-group>
+      </van-radio-group>
     </div>
 
     <div class="price-detail">
-      <h3>价格明细</h3>
+      <h3 class="margin_lr_16">价格明细</h3>
       <van-cell-group>
         <van-cell title="优惠卷" value="50" />
-        <van-cell title="运费" value="8" label="描述信息" />
+        <van-cell title="运费" value="8" />
         <van-cell title="商品总价" value="50" />
       </van-cell-group>
     </div>
@@ -115,6 +97,5 @@ const getIconUrl = (name: string) => {
 }
 .payWay {
   background-color: #fff;
-  padding: 16px;
 }
 </style>
